@@ -19,6 +19,4 @@ int main()
     std::cout << addNums(5, 6) << std::endl;
     std::cout << addNumsLambda(6,7) << std::endl;
 
-
-
 }
