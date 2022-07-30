@@ -138,7 +138,7 @@ int main()
     std::vector<int> newVec;
     auto ifInRange = [](int value)
     {
-        return ((value >= -90) && (value <= 90)); // zwraca prawdę jeśli vartość z wektora jest pomiędzy -90 a 90
+        return ((value < -90) || (value > 90)); // zwraca prawdę jeśli vartość z wektora jest < -90 lub > 90
     };
 
     std::copy_if(vec.cbegin(), vec.cend(), std::back_inserter(newVec), ifInRange); //kopiuje wartości dla których lambda zwraca true do nowego wektora
