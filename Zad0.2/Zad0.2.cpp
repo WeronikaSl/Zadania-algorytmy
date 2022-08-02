@@ -137,6 +137,24 @@ int main()
     for_each(vec.cbegin(), vec.cend(), evenNums);
     std::cout << sum << std::endl;
 
+//pkt f wersja 2
+
+    std::cout << "PktF wersja 2: " << std::endl;
+
+
+    auto ifEvenNums = [](unsigned int a, unsigned int b) -> unsigned int // a przechowuje sumę
+    {
+        if (0 == (b % 2))
+        {
+            return a + b;
+        };
+        return 0;
+    };
+
+    unsigned int result = std::accumulate(vec.begin(), vec.end(), 0, ifEvenNums);
+    std::cout << result << std::endl;
+
+
 
 }
 
